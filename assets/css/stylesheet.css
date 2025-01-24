@@ -1,109 +1,106 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
+/* WHOLE DOCUMENT */
+
 * {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 body {
-  background: #3d3d3d;
+  background: #424242;
 }
-.timeline {
-  position: relative;
-  max-width: 1920px;
-  margin: 100px;
-}
-.container {
-  padding: 10px 50px;
-  position: relative;
-  width: 50%;
-  animation: movedown 1s linear forwards;
-  opacity: 0;
-}
-@keyframes movedown {
+
+/* EXPERIENCE SECTION */
+
+@keyframes timeline-container-appear {
   0% {
-    opacity: 1;
-    transform: translateY(-30px);
+    opacity: 0.3;
+    transform: translateY(100px);
   }
   100% {
     opacity: 1;
     transform: translateY(0px);
   }
 }
-.container:nth-child(1) {
-  animation-delay: 0s;
+
+.exp-heading {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  font-size: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 50px;
+  background: #666666;
+  border-radius: 10px;
 }
-.container:nth-child(2) {
-  animation-delay: 1s;
+.exp-timeline {
+  position: relative;
+  margin: 50px;
 }
-.container:nth-child(3) {
-  animation-delay: 2s;
+.exp-container {
+  padding: 10px 50px;
+  position: relative;
+  width: 50%;
+  z-index: 1;
+  animation: timeline-container-appear 5s linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
-.container:nth-child(4) {
-  animation-delay: 3s;
-}
-.container:nth-child(5) {
-  animation-delay: 4s;
-}
-.container:nth-child(6) {
-  animation-delay: 5s;
-}
-.job-text-box {
+.exp-text-box {
   padding: 20px 30px;
   background: #fff;
   position: relative;
   border-radius: 6px;
   font-size: 1rem;
 }
-.left-container {
+.exp-timeline::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  background: #fff;
+  top: 0;
+  left: 50%;
+  margin-left: -2px;
+  z-index: -1;
+}
+
+.exp-container:nth-child(odd) {
   left: 0;
 }
-.right-container {
+.exp-container:nth-child(even) {
   left: 50%;
 }
-.container img {
+.exp-container:nth-child(odd) img {
   position: absolute;
   width: 50px;
-  border-radius: 50%;
+  border-radius: 25%;
   right: -25px;
   top: 32px;
   z-index: 10;
   background-color: #fff;
 }
-.right-container img {
+.exp-container:nth-child(even) img {
+  position: absolute;
+  width: 50px;
+  border-radius: 25%;
   left: -25px;
+  top: 32px;
+  z-index: 10;
   background-color: #fff;
 }
-.timeline::after {
-  content: "";
-  position: absolute;
-  width: 6px;
-  height: 100%;
-  background: #fff;
-  top: 0;
-  left: 50%;
-  margin: -3px;
-  z-index: -1;
-  animation: moveline 6s linear forwards;
-}
-@keyframes moveline {
-  0% {
-    height: 0;
-  }
-  100% {
-    height: 100%;
-  }
-}
-
-.text-box h2 {
+.exp-text-box h2 {
   font-weight: 600;
 }
-.text-box small {
+.exp-text-box small {
   display: inline-block;
   margin-bottom: 15px;
 }
-.left-container-arrow {
+.exp-container:nth-child(odd) .exp-container-arrow {
   height: 0;
   width: 0;
   position: absolute;
@@ -114,7 +111,7 @@ body {
   border-left: 15px solid #fff;
   right: -15px;
 }
-.right-container-arrow {
+.exp-container:nth-child(even) .exp-container-arrow {
   height: 0;
   width: 0;
   position: absolute;
@@ -125,33 +122,36 @@ body {
   border-right: 15px solid #fff;
   left: -15px;
 }
+
+/* SMALLER DISPLAY SIZING */
+
 @media screen and (max-width: 900px) {
-  .timeline {
+  .exp-timeline {
     margin: 50px auto;
   }
-  .timeline::after {
-    left: 31px;
+  .exp-timeline::after {
+    left: 45px;
   }
-  .container {
+  .exp-container {
     width: 100%;
-    padding-left: 80px;
+    padding-left: 100px;
     padding-right: 25px;
   }
-  .text-box {
+  .exp-text-box {
     font-size: 13px;
   }
-  .text-box small {
+  .exp-text-box small {
     margin-bottom: 10px;
   }
-  .right-container {
+  .exp-container:nth-child(even) {
     left: 0;
   }
-  .left-container img,
-  .right-container img {
-    left: 5px;
+  .exp-container img,
+  .exp-container:nth-child(even) img {
+    left: 20px;
   }
-  .left-container-arrow,
-  .right-container-arrow {
+  .exp-container:nth-child(odd) .exp-container-arrow,
+  .exp-container:nth-child(even) .exp-container-arrow {
     border-right: 15px solid #fff;
     border-left: 0;
     left: -15px;
