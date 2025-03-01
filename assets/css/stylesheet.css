@@ -22,7 +22,7 @@
   --normal-font: "Poppins";
 
   --bg-colour: #000000;
-  --bg-colour-2: #212529;
+  --bg-colour-2: #161616;
   --text-colour: #fff;
   --colour-1: #eb5e28;
   --colour-2: #a9471f;
@@ -164,3 +164,25 @@ span {
 }
 
 /* ABOUT SECTION */
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  background: var(--bg-colour-2);
+}
+.about-content h2 {
+  font-size: 7rem;
+  text-align: left;
+}
+.about-content p {
+  font-size: 1.8rem;
+}
+.about-content h2,
+span {
+  font-family: var(--bold-font);
+}
+.about-content .btn {
+  margin: 3rem 0;
+}
