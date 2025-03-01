@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@font-face {
+  font-family: "Frick";
+  src: url(/assets/fonts/Frick.otf) format("opentype");
+  font-weight: bolder;
+}
+
+/* WHOLE DOCUMENT */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  color: var(--white-colour);
+}
+:root {
+  --bold-font: "Frick";
+  --normal-font: "Poppins";
+
+  --bg-colour: #212529;
+  --bg-colour-2: #343a40;
+  --main-colour: #eb5e28;
+  --secondary-colour: #a9471f;
+  --main-hover: #c14f22;
+  --white-colour: #cacaca;
+  --inactive-colour: #fff3;
+}
+::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-colour-2);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--main-colour);
+  border-radius: 100vw;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--main-hover);
+}
