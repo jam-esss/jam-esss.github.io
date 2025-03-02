@@ -32,7 +32,7 @@
   --inactive-colour: #fff3;
 }
 ::-webkit-scrollbar {
-  width: 20px;
+  width: 10px;
 }
 ::-webkit-scrollbar-track {
   background: var(--bg-colour);
@@ -65,9 +65,37 @@ section {
   min-height: 100vh;
   padding: 10rem 15%;
 }
+.heading {
+  text-align: center;
+  font-size: 7rem;
+  font-family: var(--bold-font);
+  margin: 5rem 0;
+}
+
+/* HEADER */
+header {
+  background: transparent;
+  position: absolute;
+  width: 25%;
+  top: 0;
+  left: 0;
+  padding: 0.5rem 1%;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+}
+header a {
+  font-size: 3rem;
+}
+.lang-content {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem;
+  padding: 1rem 1%;
+}
 
 /* HOME SECTION*/
-
 .home {
   display: flex;
   align-items: center;
@@ -185,4 +213,108 @@ span {
 }
 .about-content .btn {
   margin: 3rem 0;
+}
+
+/* EXPERIENCE SECTION */
+.experience {
+  background-color: var(--bg-colour);
+}
+.experience-content h2 {
+  text-align: left;
+}
+
+/* CONTACT SECTION */
+.contact {
+  background-color: var(--bg-colour-2);
+}
+.contact h2 {
+  margin-bottom: 3rem;
+  color: var(--text-colour);
+}
+.contact form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin: 5rem 0;
+  text-align: center;
+}
+.contact form .input-box input,
+.contact form textarea {
+  width: 100%;
+  padding: 2.5rem;
+  font-size: 1.8rem;
+  color: var(--text-colour);
+  background-color: var(--bg-colour-2);
+  border-radius: 2rem;
+  border: 2px solid var(--colour-1);
+  margin: 1.5rem 0;
+  resize: none;
+}
+
+/* FOOTER */
+.footer {
+  background-color: var(--bg-colour);
+  padding: 30px 0;
+}
+.footer .social-icons {
+  text-align: center;
+}
+.footer ul {
+  text-align: center;
+  font-size: 1.8rem;
+}
+.footer ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+.footer ul li a {
+  color: var(--white-colour);
+  border-bottom: 3px solid transparent;
+  transition: 0.3s ease-in-out;
+}
+.footer ul li a:hover {
+  border-bottom: 3px solid var(--colour-1);
+}
+.footer .copyright {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 16px;
+}
+
+/* SCREEN SIZING */
+@media (max-width: 1285px) {
+  .home {
+    flex-direction: column-reverse;
+    margin: 1rem 0;
+    gap: 5rem;
+  }
+  .home-content {
+    align-items: center;
+    text-align: center;
+  }
+  .home-content h1,
+  span {
+    text-wrap: wrap;
+  }
+  .home-img img {
+    width: 50vw;
+  }
+
+  .about {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .about h2 {
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  .experience-content h2 {
+    text-align: center;
+  }
+
+  .contact form {
+    flex-direction: column;
+  }
 }
