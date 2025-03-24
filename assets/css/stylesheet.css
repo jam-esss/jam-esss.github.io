@@ -72,6 +72,62 @@ section {
   margin: 5rem 0;
 }
 
+/* SOCIAL ICONS */
+.social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  padding: 1rem;
+  background: transparent;
+  border: 2px solid var(--colour-1);
+  border-radius: 50%;
+  color: var(--colour-1);
+  margin: 3rem 0.5rem;
+  transition: 0.3s ease-in-out;
+}
+.social-icons a:hover {
+  color: var(--text-colour);
+  background-color: var(--colour-1);
+  transform: scale(1.2) translateY(-5px);
+  box-shadow: 0 0 25px var(--colour-1);
+  cursor: pointer;
+}
+
+/* BUTTONS */
+.btn-group {
+  display: flex;
+  gap: 1.5rem;
+}
+.btn {
+  display: inline-block;
+  padding: 1rem 3rem;
+  background-color: var(--colour-1);
+  box-shadow: 0 0 25px var(--colour-1);
+  border-radius: 3rem;
+  font-size: 1.8rem;
+  color: black;
+  border: 2px solid transparent;
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px var(--colour-1), 0 0 50px var(--colour-1);
+}
+.btn-group a:nth-of-type(2) {
+  background-color: black;
+  color: var(--colour-1);
+  border: 2px solid var(--colour-1);
+  box-shadow: 0 0 25px transparent;
+}
+.btn-group a:nth-of-type(2):hover {
+  box-shadow: 0 0 25px var(--colour-1);
+  background-color: var(--colour-1);
+  color: black;
+}
+
 /* HEADER */
 header {
   background: transparent;
@@ -87,24 +143,6 @@ header {
 .lang-content {
   display: flex;
   gap: 1rem;
-}
-.lang-btn {
-  display: inline-block;
-  padding: 0.1rem 0.5rem;
-  background-color: var(--bg-colour-2);
-  box-shadow: 0 0 5px var(--white-colour);
-  border-radius: 1rem;
-  font-size: 3rem;
-  color: black;
-  border: 2px solid transparent;
-  transition: 0.3s ease-in-out;
-}
-.lang-btn:hover {
-  color: var(--text-colour);
-  background-color: var(--colour-1);
-  transform: scale(1.2) translateY(5px);
-  box-shadow: 0 0 25px var(--colour-1);
-  cursor: pointer;
 }
 
 /* HOME SECTION*/
@@ -150,59 +188,6 @@ span {
   box-shadow: 0 0 25px var(--colour-1), 0 0 50px var(--colour-1),
     0 0 75px var(--colour-1);
 }
-.social-icons a {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 3rem;
-  padding: 1rem;
-  background: transparent;
-  border: 2px solid var(--colour-1);
-  border-radius: 50%;
-  color: var(--colour-1);
-  margin: 3rem 0.5rem;
-  transition: 0.3s ease-in-out;
-}
-.social-icons a:hover {
-  color: var(--text-colour);
-  background-color: var(--colour-1);
-  transform: scale(1.2) translateY(-5px);
-  box-shadow: 0 0 25px var(--colour-1);
-  cursor: pointer;
-}
-.btn-group {
-  display: flex;
-  gap: 1.5rem;
-}
-.btn {
-  display: inline-block;
-  padding: 1rem 3rem;
-  background-color: var(--colour-1);
-  box-shadow: 0 0 25px var(--colour-1);
-  border-radius: 3rem;
-  font-size: 1.8rem;
-  color: black;
-  border: 2px solid transparent;
-  font-weight: 600;
-  transition: 0.3s ease-in-out;
-  cursor: pointer;
-}
-.btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px var(--colour-1), 0 0 50px var(--colour-1);
-}
-
-.btn-group a:nth-of-type(2) {
-  background-color: black;
-  color: var(--colour-1);
-  border: 2px solid var(--colour-1);
-  box-shadow: 0 0 25px transparent;
-}
-.btn-group a:nth-of-type(2):hover {
-  box-shadow: 0 0 25px var(--colour-1);
-  background-color: var(--colour-1);
-  color: black;
-}
 
 /* ABOUT SECTION */
 
@@ -233,7 +218,9 @@ span {
   background-color: var(--bg-colour);
 }
 .experience-content h2 {
+  font-size: clamp(5rem, 10vw, 7rem);
   text-align: left;
+  margin-bottom: 3rem;
 }
 
 /* CONTACT SECTION */
@@ -297,9 +284,9 @@ span {
 
 /* SCREEN SIZING */
 @media (max-width: 1285px) {
+  /* HOME SECTION */
   .home {
-    flex-direction: column-reverse;
-    margin: 1rem 0;
+    flex-direction: column;
     gap: 5rem;
   }
   .home-content {
@@ -311,9 +298,10 @@ span {
     text-wrap: wrap;
   }
   .home-img img {
-    width: 50vw;
+    width: 35vw;
   }
 
+  /* ABOUT SECTION */
   .about {
     flex-direction: column-reverse;
     text-align: center;
@@ -323,10 +311,13 @@ span {
     margin: 2rem 0;
   }
 
+  /* EXPERIENCE SECTION */
   .experience-content h2 {
     text-align: center;
+    margin: 2rem 0;
   }
 
+  /* CONTACT SECTION */
   .contact form {
     flex-direction: column;
   }

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Profile ~ James P-G</title>
+    <link rel="stylesheet" href="assets/css/stylesheet.css" />
+    <link rel="icon" href="assets/images/favicon.gif" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="lang-content">
+        <a href="#" class="btn" id="lang-nl">🇳🇱</a>
+      </div>
+    </header>
+
+    <section class="home" id="home">
+      <div class="home-content">
+        <h1><span>James </span>Pink-Gyett</h1>
+        <h3><span>Production Operative </span>at <span>CNH</span></h3>
+
+        <div class="btn-group">
+          <a href="#about" class="btn">About Me</a>
+          <a href="#contact" class="btn">Contact</a>
+        </div>
+      </div>
+
+      <div class="home-img">
+        <img src="assets\images\PFP.png" alt="" />
+      </div>
+    </section>
+    <section class="about" id="about">
+      <div class="about-content">
+        <h2>About <span>Me</span></h2>
+        <p>
+          Hardworking, with a strong passion for learning. I always strive to do
+          my best in and out of the workplace. As a logical thinker, I enjoy
+          challenges and figuring out how to solve problems. I have a huge
+          passion for technology and I am working hard to someday become a
+          software developer and eventually full-stack.
+        </p>
+        <a href="#experience" class="btn">My Experience</a>
+      </div>
+    </section>
+
+    <section class="experience" id="experience">
+      <div class="experience-content">
+        <h2 class="heading">My <span>Experience</span></h2>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2 class="heading">Contact <span>Me</span></h2>
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <div class="input-group">
+          <div class="input-box">
+            <input
+              type="hidden"
+              name="access_key"
+              value="eb0be72e-f989-4967-9cbc-c0d584a11c63"
+            />
+            <input
+              type="text"
+              name="Full Name"
+              placeholder="Name / Company Name*"
+              required
+            />
+            <input type="email" name="email" placeholder="Email*" required />
+          </div>
+
+          <div class="input-box">
+            <input
+              type="number"
+              name="Phone Number"
+              placeholder="Phone Number"
+            />
+            <input type="text" name="subject" placeholder="Subject*" required />
+          </div>
+        </div>
+
+        <div class="input-group-2">
+          <textarea
+            name="message"
+            placeholder="Your Message*"
+            cols="30"
+            rows="10"
+            required
+          ></textarea>
+          <input
+            type="checkbox"
+            name="botcheck"
+            class="hidden"
+            style="display: none"
+          />
+          <input type="submit" value="Send Message" class="btn" />
+        </div>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <div class="social-icons">
+        <a href="https://github.com/jam-esss"><i class="bx bxl-github"></i></a>
+        <a href="https://www.linkedin.com/in/jamesssss/"
+          ><i class="bx bxl-linkedin-square"></i
+        ></a>
+      </div>
+
+      <ul class="list">
+        <li>
+          <a href="#home">Home</a>
+        </li>
+        <li>
+          <a href="#about">About Me</a>
+        </li>
+        <li>
+          <a href="#experience">Experience</a>
+        </li>
+        <li>
+          <a href="#contact">Contact Me</a>
+        </li>
+      </ul>
+      <p class="copyright">© James Pink-Gyett ¦ All Rights Reserved</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
